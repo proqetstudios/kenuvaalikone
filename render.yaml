@@ -23,7 +23,7 @@ services:
     name: kenuvaalikone-frontend
     runtime: docker
     repo: https://github.com/OpenVAA/voting-advice-application
-    branch: deployment
+    branch: main
     plan: standard # Check
     envVars:
       - key: PUBLIC_CACHE_ENABLED # Check
