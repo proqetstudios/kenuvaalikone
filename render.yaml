@@ -94,9 +94,9 @@ services:
       - key: PUBLIC_BROWSER_FRONTEND_URL # Check value after deployment
         value: https://kenuvaalikone-frontend.onrender.com
       - key: GENERATE_MOCK_DATA_ON_RESTART
-        value: 'false'
+        value: 'true'
       - key: GENERATE_MOCK_DATA_ON_INITIALISE
-        value: 'false'
+        value: 'true'
 
       - key: API_TOKEN_SALT
         generateValue: true
