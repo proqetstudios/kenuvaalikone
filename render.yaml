@@ -61,8 +61,6 @@ services:
     region: frankfurt
     dockerContext: .
     dockerfilePath: ./frontend/Dockerfile
-    domains:
-      - <INSTANCE_DOMAIN>
 
     disk: # Check and comment out if not planning on using the cache
       name: disk
