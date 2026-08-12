@@ -9,7 +9,7 @@ ENV YARN_VERSION=4.6
 RUN corepack enable && corepack prepare yarn@${YARN_VERSION}
 
 # Install build tools for native Node modules (sqlite3, sharp) on Alpine
-RUN apk add --no-cache python3 make g++ vips-dev
+RUN apk add --no-cache python3 make g++ vips-dev && ln -sf /usr/bin/python3 /usr/bin/python
 
 # Skip Husky installation in Docker
 ENV HUSKY=0
