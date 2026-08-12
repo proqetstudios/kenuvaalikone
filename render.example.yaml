@@ -20,10 +20,10 @@ version: '1'
 services:
   # Frontend service
   - type: web
-    name: <INSTANCE_NAME>-frontend
+    name: kenuvaalikone-frontend
     runtime: docker
     repo: https://github.com/OpenVAA/voting-advice-application
-    branch: <INSTANCE_BRANCH>
+    branch: main
     plan: standard # Check
     envVars:
       - key: PUBLIC_CACHE_ENABLED # Check
@@ -41,13 +41,13 @@ services:
         value: 'false'
 
       - key: PUBLIC_BROWSER_FRONTEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-frontend.onrender.com
+        value: https://kenuvaalikone-frontend.onrender.com
       - key: PUBLIC_SERVER_FRONTEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-frontend.onrender.com
+        value: https://kenuvaalikone-frontend.onrender.com
       - key: PUBLIC_BROWSER_BACKEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-backend.onrender.com
+        value: https://kenuvaalikone-backend.onrender.com
       - key: PUBLIC_SERVER_BACKEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-backend.onrender.com
+        value: https://kenuvaalikone-backend.onrender.com
 
       # Set this if using local adapter and disable the backend service and database
       # - key: LOCAL_DATA_DIR
@@ -61,8 +61,6 @@ services:
     region: frankfurt
     dockerContext: .
     dockerfilePath: ./frontend/Dockerfile
-    domains:
-      - <INSTANCE_DOMAIN>
 
     disk: # Check and comment out if not planning on using the cache
       name: disk
@@ -73,28 +71,28 @@ services:
 
   # Backend service
   - type: web
-    name: <INSTANCE_NAME>-backend
+    name: kenuvaalikone-backend
     runtime: docker
     repo: https://github.com/OpenVAA/voting-advice-application
-    branch: <INSTANCE_BRANCH>
+    branch: main
     plan: standard # Check
     envVars:
       - key: APP_KEYS
         sync: false
 
       - key: MAIL_FROM
-        value: '<INSTANCE_MAIL_FROM>'
+        value: 'vaino.tuovinen@proqet.com'
       - key: MAIL_REPLY_TO
-        value: '<INSTANCE_MAIL_REPLY_TO>'
+        value: 'vaino.tuovinen@proqet.com'
       - key: MAIL_FROM_NAME
-        value: '<INSTANCE_MAIL_FROM_NAME>'
+        value: 'Kenuvaalikone'
 
       - key: STRAPI_PORT
         value: 1337
       - key: STRAPI_HOST
         value: 0.0.0.0
       - key: PUBLIC_BROWSER_FRONTEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-frontend.onrender.com
+        value: https://kenuvaalikone-frontend.onrender.com
       - key: GENERATE_MOCK_DATA_ON_RESTART
         value: 'false'
       - key: GENERATE_MOCK_DATA_ON_INITIALISE
@@ -109,30 +107,30 @@ services:
 
       - key: DATABASE_HOST # Check value after deployment
         fromDatabase:
-          name: <INSTANCE_NAME>-db
+          name: kenuvaalikone-db
           property: host
       - key: DATABASE_PORT
         fromDatabase:
-          name: <INSTANCE_NAME>-db
+          name: kenuvaalikone-db
           property: port
       - key: DATABASE_NAME
         fromDatabase:
-          name: <INSTANCE_NAME>-db
+          name: kenuvaalikone-db
           property: database
       - key: DATABASE_USERNAME
         fromDatabase:
-          name: <INSTANCE_NAME>-db
+          name: kenuvaalikone-db
           property: user
       - key: DATABASE_PASSWORD
         fromDatabase:
-          name: <INSTANCE_NAME>-db
+          name: kenuvaalikone-db
           property: password
       - key: DATABASE_SSL_SELF
         value: 'false'
       - key: DATABASE_SCHEMA
         value: public
       - key: STATIC_MEDIA_CONTENT_PATH
-        value: public/media/<INSTANCE_NAME>
+        value: public/media/kenuvaalikone
 
       - fromGroup: AWS SES SMTP
       - fromGroup: AWS SES HTTP
@@ -148,7 +146,7 @@ services:
     #   - foo-backend.bar.com
 
 databases:
-  - name: <INSTANCE_NAME>-db
+  - name: kenuvaalikone-db
 
     plan: basic-1gb # Check
     diskSizeGB: 10 # Check
