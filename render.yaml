@@ -20,10 +20,10 @@ version: '1'
 services:
   # Frontend service
   - type: web
-    name: <INSTANCE_NAME>-frontend
+    name: kenuvaalikone-frontend
     runtime: docker
     repo: https://github.com/OpenVAA/voting-advice-application
-    branch: main
+    branch: deployment
     plan: standard # Check
     envVars:
       - key: PUBLIC_CACHE_ENABLED # Check
@@ -41,13 +41,13 @@ services:
         value: 'false'
 
       - key: PUBLIC_BROWSER_FRONTEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-frontend.onrender.com
+        value: https://kenuvaalikone-frontend.onrender.com
       - key: PUBLIC_SERVER_FRONTEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-frontend.onrender.com
+        value: https://kenuvaalikone-frontend.onrender.com
       - key: PUBLIC_BROWSER_BACKEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-backend.onrender.com
+        value: https://kenuvaalikone-backend.onrender.com
       - key: PUBLIC_SERVER_BACKEND_URL # Check value after deployment
-        value: https://<INSTANCE_NAME>-backend.onrender.com
+        value: https://kenuvaalikone-backend.onrender.com
 
       # Set this if using local adapter and disable the backend service and database
       # - key: LOCAL_DATA_DIR
@@ -74,18 +74,18 @@ services:
     name: <INSTANCE_NAME>-backend
     runtime: docker
     repo: https://github.com/OpenVAA/voting-advice-application
-    branch: main
+    branch: deployment
     plan: standard # Check
     envVars:
       - key: APP_KEYS
         sync: false
 
       - key: MAIL_FROM
-        value: '<INSTANCE_MAIL_FROM>'
+        value: 'vaino.tuovinen@proqet.com'
       - key: MAIL_REPLY_TO
-        value: '<INSTANCE_MAIL_REPLY_TO>'
+        value: 'vaino.tuovinen@proqet.com'
       - key: MAIL_FROM_NAME
-        value: '<INSTANCE_MAIL_FROM_NAME>'
+        value: 'Kenuvaalikone'
 
       - key: STRAPI_PORT
         value: 1337
