@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const aws = require('@aws-sdk/client-ses');
-
 export default ({ env }) => {
   const isDev = env('NODE_ENV') === 'development';
 
@@ -16,30 +13,23 @@ export default ({ env }) => {
       }
     },
     email: {
-      config: {
-        provider: 'nodemailer',
-        providerOptions: {
-          SES: {
-            ses: new aws.SES({
-              endpoint: env('LOCALSTACK_ENDPOINT'),
-              apiVersion: '2010-12-01',
-              region: env('AWS_SES_REGION'),
-              credentials: {
-                accessKeyId: env('AWS_SES_ACCESS_KEY_ID'),
-                secretAccessKey: env('AWS_SES_SECRET_ACCESS_KEY')
-              }
-            }),
-            aws
-          },
-          // max 14 messages per second to comply with AWS SES
-          sendingRate: 14
+    config: {
+      provider: 'nodemailer',
+      providerOptions: {
+        host: env('SMTP_HOST'),
+        port: env.int('SMTP_PORT', 465),
+        secure: true,
+        auth: {
+          user: env('SMTP_USERNAME'),
+          pass: env('SMTP_PASSWORD'),
         },
-        settings: {
-          defaultFrom: env('MAIL_FROM'),
-          defaultReplyTo: env('MAIL_REPLY_TO')
-        }
-      }
+      },
+      settings: {
+        defaultFrom: env('DEFAULT_FROM'),
+        defaultReplyTo: env('DEFAULT_REPLY_TO'),
+      },
     },
+  },
     upload: {
       config: {
         provider: 'aws-s3',
