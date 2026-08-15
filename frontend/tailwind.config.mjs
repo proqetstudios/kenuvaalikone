@@ -219,15 +219,15 @@ export default {
       {
         light: {
           // DaisyUI colors: https://daisyui.com/docs/colors/
-          primary: getColor('primary', '#2546a8'), // = success
+          primary: getColor('primary', '#3e6f51'), // = success
           secondary: getColor('secondary', '#666666'),
-          accent: getColor('accent', '#0a716b'), // = info
+          accent: getColor('accent', '#2a4d38'), // = info
           neutral: getColor('neutral', '#333333'),
           'base-100': getColor('base-100', '#ffffff'),
           'base-200': getColor('base-200', '#e8f5f6'), // 50% tint of base-300 on base-100
           'base-300': getColor('base-300', '#d1ebee'),
-          info: getColor('accent', '#0a716b'), // = accent (var() cannot be used in these)
-          success: getColor('primary', '#2546a8'), // = primary
+          info: getColor('accent', '#2a4d38'), // = accent (var() cannot be used in these)
+          success: getColor('primary', '#3e6f51'), // = primary
           warning: getColor('warning', '#a82525'), // = error
           error: getColor('warning', '#a82525'), // = warning
           'base-content': getColor('neutral', '#333333'), // = neutral
@@ -249,15 +249,15 @@ export default {
         },
         dark: {
           // DaisyUI colors: https://daisyui.com/docs/colors/
-          primary: getColor('primary', '#6887e3', 'dark'), // = success
+          primary: getColor('primary', '#3e6f51', 'dark'), // = success
           secondary: getColor('secondary', '#8c8c8c', 'dark'),
-          accent: getColor('accent', '#11a8a0', 'dark'), // = info
+          accent: getColor('accent', '#2a4d38', 'dark'), // = info
           neutral: getColor('neutral', '#cccccc', 'dark'),
           'base-100': getColor('base-100', '#000000', 'dark'),
           'base-200': getColor('base-200', '#101212', 'dark'), // 50% tint of base-300 on base-100
           'base-300': getColor('base-300', '#1f2324', 'dark'),
-          info: getColor('info', '#11a8a0', 'dark'), // = accent (var() cannot be used in these)
-          success: getColor('primary', '#6887e3', 'dark'), // = primary
+          info: getColor('info', '#2a4d38', 'dark'), // = accent (var() cannot be used in these)
+          success: getColor('primary', '#3e6f51', 'dark'), // = primary
           warning: getColor('warning', '#e16060', 'dark'), // = error
           error: getColor('warning', '#e16060', 'dark'), // = warning
           'base-content': getColor('neutral', '#cccccc', 'dark'), // = neutral
