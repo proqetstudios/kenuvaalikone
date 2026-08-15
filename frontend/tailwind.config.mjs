@@ -222,8 +222,8 @@ export default {
           accent: '#2a4d38', // = info
           neutral: '#333333',
           'base-100': '#ffffff',
-          'base-200': '#e8f5f6', // 50% tint of base-300 on base-100
-          'base-300': '#d1ebee',
+          'base-200': '#bfe0cc', // 50% tint of base-300 on base-100
+          'base-300': '#91bea2',
           info: '#2a4d38', // = accent 
           success: '#3e6f51', // = primary
           warning: '#a82525', // = error
