@@ -134,7 +134,6 @@ export default {
     spacing: {
       px: '1px',
       0: '0px',
-      // 1: `${1/16}rem`,
       2: `${2 / 16}rem`,
       4: `${4 / 16}rem`,
       xs: `${4 / 16}rem`, // Gap bw icon and label
@@ -158,7 +157,6 @@ export default {
       60: `${60 / 16}rem`,
       xxl: `${60 / 16}rem`, // Portrait height
       100: `${100 / 16}rem`,
-      // We might want to use the plugin https://github.com/mvllow/tailwindcss-safe-area
       safel: 'env(safe-area-inset-left, 0px)',
       safer: 'env(safe-area-inset-right, 0px)',
       safet: 'env(safe-area-inset-top, 0px)',
@@ -219,61 +217,61 @@ export default {
       {
         light: {
           // DaisyUI colors: https://daisyui.com/docs/colors/
-          primary: getColor('primary', '#3e6f51'), // = success
-          secondary: getColor('secondary', '#666666'),
-          accent: getColor('accent', '#2a4d38'), // = info
-          neutral: getColor('neutral', '#333333'),
-          'base-100': getColor('base-100', '#ffffff'),
-          'base-200': getColor('base-200', '#e8f5f6'), // 50% tint of base-300 on base-100
-          'base-300': getColor('base-300', '#d1ebee'),
-          info: getColor('accent', '#2a4d38'), // = accent (var() cannot be used in these)
-          success: getColor('primary', '#3e6f51'), // = primary
-          warning: getColor('warning', '#a82525'), // = error
-          error: getColor('warning', '#a82525'), // = warning
-          'base-content': getColor('neutral', '#333333'), // = neutral
-          'primary-content': getColor('base-100', '#ffffff'), // = base-100
-          'secondary-content': getColor('base-100', '#ffffff'), // = base-100
-          'accent-content': getColor('base-100', '#ffffff'), // = base-100
-          'info-content': getColor('base-100', '#ffffff'), // = base-100
-          'success-content': getColor('base-100', '#ffffff'), // = base-100
-          'warning-content': getColor('base-100', '#ffffff'), // = base-100
-          'error-content': getColor('base-100', '#ffffff'), // = base-100
+          primary: '#3e6f51', // = success
+          secondary: '#666666',
+          accent: '#2a4d38', // = info
+          neutral: '#333333',
+          'base-100': '#ffffff',
+          'base-200': '#e8f5f6', // 50% tint of base-300 on base-100
+          'base-300': '#d1ebee',
+          info: '#2a4d38', // = accent 
+          success: '#3e6f51', // = primary
+          warning: '#a82525', // = error
+          error: '#a82525', // = warning
+          'base-content': '#333333', // = neutral
+          'primary-content': '#ffffff',
+          'secondary-content': '#ffffff',
+          'accent-content': '#ffffff',
+          'info-content': '#ffffff',
+          'success-content': '#ffffff',
+          'warning-content': '#ffffff',
+          'error-content': '#ffffff',
 
           // Other DaisyUI variables
           ...themeCSSVars,
 
           // Custom variables
-          '--line-color': getColor('line-color', '#d9d9d9'),
+          '--line-color': '#d9d9d9',
           '--progress-color': 'oklch(var(--n))',
           '--progress-label-color': 'oklch(var(--n))'
         },
         dark: {
           // DaisyUI colors: https://daisyui.com/docs/colors/
-          primary: getColor('primary', '#3e6f51', 'dark'), // = success
-          secondary: getColor('secondary', '#8c8c8c', 'dark'),
-          accent: getColor('accent', '#2a4d38', 'dark'), // = info
-          neutral: getColor('neutral', '#cccccc', 'dark'),
-          'base-100': getColor('base-100', '#000000', 'dark'),
-          'base-200': getColor('base-200', '#101212', 'dark'), // 50% tint of base-300 on base-100
-          'base-300': getColor('base-300', '#1f2324', 'dark'),
-          info: getColor('info', '#2a4d38', 'dark'), // = accent (var() cannot be used in these)
-          success: getColor('primary', '#3e6f51', 'dark'), // = primary
-          warning: getColor('warning', '#e16060', 'dark'), // = error
-          error: getColor('warning', '#e16060', 'dark'), // = warning
-          'base-content': getColor('neutral', '#cccccc', 'dark'), // = neutral
-          'primary-content': getColor('base-100', '#000000', 'dark'),
-          'secondary-content': getColor('base-100', '#000000', 'dark'),
-          'accent-content': getColor('base-100', '#000000', 'dark'),
-          'info-content': getColor('base-100', '#000000', 'dark'),
-          'success-content': getColor('base-100', '#000000', 'dark'),
-          'warning-content': getColor('base-100', '#000000', 'dark'),
-          'error-content': getColor('base-100', '#000000', 'dark'),
+          primary: '#3e6f51', // = success
+          secondary: '#8c8c8c',
+          accent: '#2a4d38', // = info
+          neutral: '#cccccc',
+          'base-100': '#000000',
+          'base-200': '#101212', // 50% tint of base-300 on base-100
+          'base-300': '#1f2324',
+          info: '#2a4d38', // = accent 
+          success: '#3e6f51', // = primary
+          warning: '#e16060', // = error
+          error: '#e16060', // = warning
+          'base-content': '#cccccc', // = neutral
+          'primary-content': '#000000',
+          'secondary-content': '#000000',
+          'accent-content': '#000000',
+          'info-content': '#000000',
+          'success-content': '#000000',
+          'warning-content': '#000000',
+          'error-content': '#000000',
 
           // Other DaisyUI variables
           ...themeCSSVars,
 
           // Custom variables
-          '--line-color': getColor('line-color', '#262626', 'dark'),
+          '--line-color': '#262626',
           '--progress-color': 'oklch(var(--n))',
           '--progress-label-color': 'oklch(var(--n))'
         }
