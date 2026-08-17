@@ -22,7 +22,7 @@ services:
   - type: web
     name: kenuvaalikone-frontend
     runtime: docker
-    repo: https://github.com/OpenVAA/voting-advice-application
+    repo: https://github.com/proqetstudios/kenuvaalikone
     branch: main
     plan: standard # Check
     envVars:
@@ -73,7 +73,7 @@ services:
   - type: web
     name: kenuvaalikone-backend
     runtime: docker
-    repo: https://github.com/OpenVAA/voting-advice-application
+    repo: https://github.com/proqetstudios/kenuvaalikone
     branch: main
     plan: standard # Check
     envVars:
