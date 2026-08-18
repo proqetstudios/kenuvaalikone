@@ -29,7 +29,7 @@ services:
       - key: PUBLIC_CACHE_ENABLED # Check
         value: 'true'
       - key: CACHE_TTL
-        value: 86400000
+        value: 300000
       - key: CACHE_LRU_SIZE
         value: 1000
       - key: CACHE_EXPIRATION_INTERVAL
