@@ -16,9 +16,9 @@ export const staticSettings: StaticSettings = {
   },
   colors: {
     light: {
-      primary: '#3e6f51',
+      primary: '#234430',
       secondary: '#666666',
-      accent: '#2a4d38',
+      accent: '#234430',
       neutral: '#333333',
       'base-100': '#ffffff',
       'base-200': '#b7d6c3',
@@ -27,9 +27,9 @@ export const staticSettings: StaticSettings = {
       'line-color': '#d9d9d9'
     },
     dark: {
-      primary: '#3e6f51',
+      primary: '#234430',
       secondary: '#8c8c8c',
-      accent: '#2a4d38',
+      accent: '#234430',
       neutral: '#cccccc',
       'base-100': '#000000',
       'base-200': '#101212',
