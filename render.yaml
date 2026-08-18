@@ -24,7 +24,7 @@ services:
     runtime: docker
     repo: https://github.com/proqetstudios/kenuvaalikone
     branch: main
-    plan: standard # Check
+    plan: starter # Check
     envVars:
       - key: PUBLIC_CACHE_ENABLED # Check
         value: 'true'
@@ -75,7 +75,7 @@ services:
     runtime: docker
     repo: https://github.com/proqetstudios/kenuvaalikone
     branch: main
-    plan: standard # Check
+    plan: starter # Check
     envVars:
       - key: APP_KEYS
         sync: false
@@ -85,7 +85,7 @@ services:
       - key: MAIL_REPLY_TO
         value: 'vaino.tuovinen@proqet.com'
       - key: MAIL_FROM_NAME
-        value: 'Kenuvaalikone'
+        value: 'KenuVaalikone'
 
       - key: STRAPI_PORT
         value: 1337
