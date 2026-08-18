@@ -27,7 +27,7 @@ services:
     plan: standard # Check
     envVars:
       - key: PUBLIC_CACHE_ENABLED # Check
-        value: 'false'
+        value: 'true'
       - key: CACHE_TTL
         value: 86400000
       - key: CACHE_LRU_SIZE
