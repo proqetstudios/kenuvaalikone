@@ -2,7 +2,7 @@ import type { StaticSettings } from './staticSettings.type';
 
 export const staticSettings: StaticSettings = {
   admin: {
-    email: 'first.last@openvaa.org'
+    email: 'vaino.tuovinen@proqet.com'
   },
   appVersion: {
     version: 1,
@@ -56,10 +56,6 @@ export const staticSettings: StaticSettings = {
     {
       code: 'sv',
       name: 'Svenska'
-    },
-    {
-      code: 'da',
-      name: 'Dansk'
     }
   ],
   analytics: {
