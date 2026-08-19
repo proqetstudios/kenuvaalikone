@@ -21,19 +21,19 @@ export const staticSettings: StaticSettings = {
       accent: '#234430',
       neutral: '#333333',
       'base-100': '#ffffff',
-      'base-200': '#b7d6c3',
-      'base-300': '#91bea2',
+      'base-200': '#c5e0cf',
+      'base-300': '#9dcaaf',
       warning: '#a82525',
       'line-color': '#d9d9d9'
     },
     dark: {
-      primary: '#234430',
+      primary: '#457357',
       secondary: '#8c8c8c',
-      accent: '#234430',
+      accent: '#457357',
       neutral: '#cccccc',
       'base-100': '#000000',
-      'base-200': '#101212',
-      'base-300': '#1f2324',
+      'base-200': '#202323',
+      'base-300': '#2c3031',
       warning: '#e16060',
       'line-color': '#262626'
     }
