@@ -59,7 +59,7 @@ export const staticSettings: StaticSettings = {
     }
   ],
   analytics: {
-    trackEvents: false,
+    trackEvents: true,
     platform: {
       name: 'umami',
       code: '9a49520a-e353-4e6f-9579-b21fc88bad25',
