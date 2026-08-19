@@ -148,7 +148,7 @@ services:
 databases:
   - name: kenuvaalikone-db
 
-    plan: basic-1gb # Check
+    plan: basic-256mb # Check
     diskSizeGB: 10 # Check
 
     # If necessary, uncomment and define values
