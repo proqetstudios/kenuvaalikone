@@ -14,7 +14,7 @@
     "label": "Totalt betyg för appen",
     "valueLabel": "{rating, plural, =0 {Inget betyg} other {Betyg # av {ratingMax}}}"
   },
-  "send": "SV Send feedback",
+  "send": "Skicka feedback",
   "sending": "Skickas…",
   "thanks": "Tack för din feedback!",
   "title": "Feedback"
