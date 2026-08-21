@@ -149,7 +149,7 @@ databases:
   - name: kenuvaalikone-db
 
     plan: basic-256mb # Check
-    diskSizeGB: 10 # Check
+    diskSizeGB: 5 # Check
 
     # If necessary, uncomment and define values
     # databaseName: <INSTANCE_NAME>-dbname

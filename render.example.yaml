@@ -22,14 +22,14 @@ services:
   - type: web
     name: kenuvaalikone-frontend
     runtime: docker
-    repo: https://github.com/OpenVAA/voting-advice-application
+    repo: https://github.com/proqetstudios/kenuvaalikone
     branch: main
     plan: starter # Check
     envVars:
       - key: PUBLIC_CACHE_ENABLED # Check
-        value: 'false'
+        value: 'true'
       - key: CACHE_TTL
-        value: 86400000
+        value: 300000
       - key: CACHE_LRU_SIZE
         value: 1000
       - key: CACHE_EXPIRATION_INTERVAL
@@ -73,7 +73,7 @@ services:
   - type: web
     name: kenuvaalikone-backend
     runtime: docker
-    repo: https://github.com/OpenVAA/voting-advice-application
+    repo: https://github.com/proqetstudios/kenuvaalikone
     branch: main
     plan: starter # Check
     envVars:
@@ -148,8 +148,8 @@ services:
 databases:
   - name: kenuvaalikone-db
 
-    plan: basic-1gb # Check
-    diskSizeGB: 10 # Check
+    plan: basic-256mb # Check
+    diskSizeGB: 5 # Check
 
     # If necessary, uncomment and define values
     # databaseName: <INSTANCE_NAME>-dbname
