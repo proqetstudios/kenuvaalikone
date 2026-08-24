@@ -24,7 +24,7 @@ export const staticSettings: StaticSettings = {
       'base-200': '#b7d6c3',
       'base-300': '#91bea2',
       warning: '#a82525',
-      'line-color': '#d9d9d9'
+      'line-color': '#ffffff'
     },
     dark: {
       primary: '#457357',
